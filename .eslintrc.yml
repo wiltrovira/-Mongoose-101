@@ -9,5 +9,7 @@ parserOptions:
 rules: {
   linebreak-style: ["error", "unix"],
   quotes: ["error", "double"],
-  no-console: ["error", { allow: ["warn", "error", "log"] }]
+  no-console: 0 , #["error", { allow: ["warn", "error", "log"] }]
+  indent: ["error", 2],
+  max-len: ["error", { "code": 80 }]
 }

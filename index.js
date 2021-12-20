@@ -46,7 +46,7 @@ try {
   console.error("Error al recuperar los registros.", e.message);
 }
 
-console.log("Fin del programa"); // Esta línea se imprime inmediatamente, incluso antes de devolver el resultado
+console.log("Fin del programa");
 
 /**
  * Captura un error inesperado

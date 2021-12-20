@@ -3,7 +3,9 @@
  * Agregar una línea con la variable
  *          EXAMPLE_MONGODB_CONNSTRING=cadenaConexionMongoDB
  */
-require("dotenv").config(); // Requiere el módulo dotenv para cargar variables de entorno
+
+// Requiere el módulo dotenv para cargar variables de entorno
+require("dotenv").config();
 
 // Conecta a la base de datos a través de Mongoose (https://mongoosejs.com/)
 const mongoDB = require("mongoose");
@@ -17,7 +19,7 @@ const dbOptions = {
   dbName, // Nombre de la base de datos
   autoIndex: false, // Don't build indexes
   maxPoolSize: 2, // Maintain up to 10 socket connections
-  serverSelectionTimeoutMS: 5000, // Keep trying to send operations for 5 seconds
+  serverSelectionTimeoutMS: 5000, // Keep trying to send operations for 5 secs
   socketTimeoutMS: 30000, // Close sockets after 30 seconds of inactivity
   family: 4, // Use IPv4, skip trying IPv6
 };
