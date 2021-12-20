@@ -18,3 +18,11 @@ Nota: La base de datos puede estar en un servidor de MongoDB local, en Atlas Mon
 1. npm init -y
 2. npm install dotenv  (versión 10.0.0)
 3. npm install mongoose (versión 6.1.2)
+
+## Archivos de Ejemplo
+
+./database/dbconnection.js: Genera la conexión a la base de datos de MongoDB
+./model/usersDTO.js: Define el esquema y  modelo del usuario
+./model/usersDao.js: Implementa los métodos para insertar y consultar
+./index.js: Realizar la inserción y consulta de registros de usuarios
+
