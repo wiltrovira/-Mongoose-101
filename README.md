@@ -21,8 +21,7 @@ Nota: La base de datos puede estar en un servidor de MongoDB local, en Atlas Mon
 
 ## Archivos de Ejemplo
 
-./database/dbconnection.js: Genera la conexión a la base de datos de MongoDB
-./model/usersDTO.js: Define el esquema y  modelo del usuario
-./model/usersDao.js: Implementa los métodos para insertar y consultar
-./index.js: Realizar la inserción y consulta de registros de usuarios
-
+1. ./database/dbconnection.js: Genera la conexión a la base de datos de MongoDB
+2. ./model/usersDTO.js: Define el esquema y  modelo del usuario
+3. ./model/usersDao.js: Implementa los métodos para insertar y consultar
+4. ./index.js: Realizar la inserción y consulta de registros de usuarios
