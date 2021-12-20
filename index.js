@@ -42,7 +42,7 @@ try {
 
 try {
   usuariosDao.selectAll();
-} catch {
+} catch (e) {
   console.error("Error al recuperar los registros.", e.message);
 }
 

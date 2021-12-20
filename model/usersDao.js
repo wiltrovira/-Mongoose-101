@@ -37,10 +37,12 @@ function selectAll() {
 
 /**
  * Inserta un registro en la base de datos
- * @param {*} nombre_completo Nombre del usuario
- * @param {*} telefono Teléfono del usuario
- * @param {*} direccion Dirección del usuario
- * @param {*} correo Correo electrónico del usuario
+ * @param {*} vNombreCompleto Nombre del usuario
+ * @param {*} vTelefono Teléfono del usuario
+ * @param {*} vDireccion Dirección del usuario
+ * @param {*} vCorreo Correo electrónico del usuario
+ * @param {*} vTipoDcocumento Tipo documento
+ * @param {*} vNumeroDocumento número de documento
  */
 function insertOne(
   vNombreCompleto,
