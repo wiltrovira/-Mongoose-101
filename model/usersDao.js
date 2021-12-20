@@ -1,10 +1,38 @@
-const usersDTO = require("./usersDTO"); //Conexión a la base de datos
+const usersDTO = require("./usersDTO"); // Conexión a la base de datos
 
 /**
- *
+ * Callback para la impresión de lista de usuarios
+ * @param {*} err Objeto con el error
+ * @param {*} usuarios Lista de usuarios
+ */
+function callbackSelectAll(err, usuarios) {
+  if (err) {
+    console.error("Error al consultar usuarios ==> ", err.message);
+    return;
+  }
+
+  console.log("Lista de usuarios ==> ", usuarios);
+}
+
+/**
+ * Callback para la impresión de lista de usuarios
+ * @param {*} err Objeto con el error
+ * @param {*} usuarios Lista de usuarios
+ */
+function callbackInsertOne(err, usuario) {
+  if (err) {
+    console.log("Error al insertar usuarios ==> ", err.message);
+    return;
+  }
+
+  console.log("Usuario creado ==> ", usuario);
+}
+
+/**
+ * Selecciona todos los usuarios de la colección
  */
 function selectAll() {
-    usersDTO.find({}, callbackSelectAll);
+  usersDTO.find({}, callbackSelectAll);
 }
 
 /**
@@ -15,54 +43,26 @@ function selectAll() {
  * @param {*} correo Correo electrónico del usuario
  */
 function insertOne(
-    vNombre_completo,
-    vTelefono,
-    vDireccion,
-    vCorreo,
-    vTipoDcocumento,
-    vNumeroDocumento
+  vNombreCompleto,
+  vTelefono,
+  vDireccion,
+  vCorreo,
+  vTipoDcocumento,
+  vNumeroDocumento,
 ) {
-    usersDTO.create(
-        {
-            nombre_completo: vNombre_completo,
-            telefono: vTelefono,
-            direccion: vDireccion,
-            correo: vCorreo,
-            tipo_documento: vTipoDcocumento,
-            numero_documento: vNumeroDocumento,
-        },
-        callbackInsertOne
-    );
+  usersDTO.create(
+    {
+      nombre_completo: vNombreCompleto,
+      telefono: vTelefono,
+      direccion: vDireccion,
+      correo: vCorreo,
+      tipo_documento: vTipoDcocumento,
+      numero_documento: vNumeroDocumento,
+    },
+    callbackInsertOne,
+  );
 }
 
-/**
- * Callback para la impresión de lista de usuarios
- * @param {*} err Objeto con el error
- * @param {*} usuarios Lista de usuarios
- */
-function callbackSelectAll(err, usuarios) {
-    if (err) {
-        console.log("Error al consultar usuarios ==> ", err.message);
-        return;
-    }
-
-    console.log("Lista de usuarios ==> ", usuarios);
-}
-
-/**
- * Callback para la impresión de lista de usuarios
- * @param {*} err Objeto con el error
- * @param {*} usuarios Lista de usuarios
- */
-function callbackInsertOne(err, usuario) {
-    if (err) {
-        console.log("Error al insertar usuarios ==> ", err.message);
-        return err;
-    }
-
-    console.log("Usuario creado ==> ", usuario);
-}
-
-//Exporta las funciones
+// Exporta las funciones
 exports.insertOne = insertOne;
 exports.selectAll = selectAll;

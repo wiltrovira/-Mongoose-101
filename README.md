@@ -18,6 +18,8 @@ Nota: La base de datos puede estar en un servidor de MongoDB local, en Atlas Mon
 1. npm init -y
 2. npm install dotenv  (versión 10.0.0)
 3. npm install mongoose (versión 6.1.2)
+4. npm install eslint --save-dev
+5. npx eslint --init
 
 ## Archivos de Ejemplo
 
